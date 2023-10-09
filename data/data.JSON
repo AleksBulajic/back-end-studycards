@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "question": "Explain event delegation/Explain how this works in JavaScript.",
     "answer": "Event delegation is a technique where you attach a single event listener to a common ancestor of multiple elements to efficiently handle events on those elements. 'this' in JavaScript refers to the current execution context, which varies depending on how and where a function is called. It typically points to the object that invoked the function."
   },
@@ -142,5 +142,77 @@
   {
     "question": "Explain the difference between synchronous and asynchronous functions.",
     "answer": "Synchronous functions execute sequentially, blocking the execution of code until they complete. In other words, each operation is completed before the next one starts. Synchronous code can be easier to read and reason about but can lead to performance issues if long-running operations block the main thread.\n\nAsynchronous functions, on the other hand, allow code to continue executing without waiting for a particular operation to finish. They typically use callbacks, Promises, or async/await syntax to manage asynchronous operations. Asynchronous code is crucial for non-blocking behavior, like fetching data from a server or handling user interactions, to maintain a responsive user interface."
+  },
+  {
+    "question": "What is event loop? What is the difference between call stack and task queue?",
+    "answer": "The event loop is a fundamental concept in JavaScript's concurrency model. It's responsible for managing the execution of code in a non-blocking and asynchronous manner. The event loop continuously checks the call stack for executed functions and the task queue for pending tasks. When the call stack is empty, it dequeues and executes tasks from the task queue, allowing asynchronous operations to be processed without blocking the main thread."
+  },
+  {
+    "question": "Explain the differences in the usage of foo between function foo() {} and var foo = function() {}.",
+    "answer": "The key difference lies in hoisting and scope. 'function foo() {}' declarations are hoisted, meaning they can be used before their actual declaration in the code. 'var foo = function() {}' is a variable assignment and is not hoisted. Additionally, 'function foo() {}' is function-scoped, while 'var foo = function() {}' is block-scoped when declared inside a block with 'let' or 'const'."
+  },
+  {
+    "question": "What are the differences between variables created using let, var, or const?",
+    "answer": "The main differences are in hoisting, scope, and reassignment. 'var' is function-scoped and hoisted, 'let' and 'const' are block-scoped and not hoisted. 'var' allows redeclaration within the same scope, while 'let' and 'const' do not. 'let' variables can be reassigned, while 'const' variables are immutable after assignment."
+  },
+  {
+    "question": "What are the differences between ES6 class and ES5 function constructors?",
+    "answer": "ES6 classes provide syntactical sugar for defining constructor functions. They offer a more structured and familiar way to define object constructors with 'class' and 'constructor' keywords. ES5 function constructors use regular functions and 'prototype' for inheritance. ES6 classes have more concise syntax and support extends for inheritance, making them easier to work with."
+  },
+  {
+    "question": "Can you offer a use case for the new arrow => function syntax? How does this new syntax differ from other functions?",
+    "answer": "Arrow functions ('=>') are suitable for concise anonymous functions and functions that don't require their 'this' context. They have a shorter syntax and inherit 'this' from the surrounding code. This differs from regular functions, which create their own 'this' context."
+  },
+  {
+    "question": "What advantage is there for using the arrow syntax for a method in a constructor?",
+    "answer": "Using arrow functions for methods in a constructor can be beneficial when you want to share the same method across all instances without creating a new function for each instance. Arrow functions don't have their 'this' context, so they access the 'this' of the constructor, making them more memory-efficient."
+  },
+  {
+    "question": "What is the definition of a higher-order function?",
+    "answer": "A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. They enable powerful functional programming concepts like composition, mapping, filtering, and encapsulating behavior, promoting code reusability and abstraction."
+  },
+  {
+    "question": "Can you give an example of destructuring an object or an array?",
+    "answer": "Certainly! Destructuring allows you to extract values from objects or arrays and assign them to variables. For example, 'const { name, age } = person;' extracts 'name' and 'age' properties from 'person' object. For arrays, '[a, b] = [1, 2];' assigns 1 to 'a' and 2 to 'b'."
+  },
+  {
+    "question": "ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?",
+    "answer": "Template literals allow string interpolation and multiline strings. For example: 'const name = 'John'; const message = `Hello, ${name}!`;'. This creates a string with 'Hello, John!' by interpolating the 'name' variable."
+  },
+  {
+    "question": "Can you give an example of a curry function and why this syntax offers an advantage?",
+    "answer": "Certainly! A curried function is a series of functions that each take one argument. It allows you to create reusable functions with partial application. For example, 'const add = (a) => (b) => a + b;' creates a curried 'add' function, and you can use it as 'add(2)(3);'. This offers flexibility and composability."
+  },
+  {
+    "question": "What are the benefits of using spread syntax and how is it different from rest syntax?",
+    "answer": "Spread syntax ('...') is used to spread elements of an iterable (e.g., arrays) into another array or object. It's useful for creating copies, merging arrays, or passing function arguments. Rest syntax ('...') is used in function parameters to collect multiple arguments into an array. Spread and rest syntax have similar syntax but different use cases."
+  },
+  {
+    "question": "How can you share code between files?",
+    "answer": "Code sharing between files is achieved through module systems like CommonJS (Node.js), ES6 Modules (Node.js and modern browsers), and bundling tools like Webpack. You export functions, objects, or classes from one file using 'module.exports' (CommonJS) or 'export' (ES6 Modules) and import them in another file using 'require' (CommonJS) or 'import' (ES6 Modules)."
+  },
+  {
+    "question": "Can you name two programming paradigms important for JavaScript app developers?",
+    "answer": "Two important programming paradigms for JavaScript app developers are 'functional programming' and 'object-oriented programming.'"
+  },
+  {
+    "question": "What is functional programming?",
+    "answer": "Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions. It emphasizes immutability, pure functions, and higher-order functions as core concepts."
+  },
+  {
+    "question": "What is the difference between classical inheritance and prototypal inheritance?",
+    "answer": "Classical inheritance is based on the concept of classes and involves creating objects based on predefined classes. Prototypal inheritance, on the other hand, involves creating objects directly from other objects, often using a prototype chain."
+  },
+  {
+    "question": "What are the pros and cons of functional programming vs object-oriented programming?",
+    "answer": "Functional programming pros include improved code maintainability, fewer side effects, and easier debugging. Cons may include a steeper learning curve. Object-oriented programming pros include encapsulation and modeling real-world objects. Cons may include complexity and potential for mutable state."
+  },
+  {
+    "question": "What are two-way data binding and one-way data flow, and how are they different?",
+    "answer": "Two-way data binding allows changes in the model to automatically update the view and vice versa. One-way data flow restricts data updates to flow in a single direction, from parent to child components. Two-way data binding can lead to complex dependencies, while one-way data flow simplifies data tracking."
+  },
+  {
+    "question": "What is asynchronous programming, and why is it important in JavaScript?",
+    "answer": "Asynchronous programming is a programming style that allows tasks to run independently without blocking the main program's execution. In JavaScript, it's crucial for handling tasks like network requests and user interactions without freezing the user interface."
   }
 ]
