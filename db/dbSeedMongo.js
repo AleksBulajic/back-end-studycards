@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import db from "./dbConnection.js";
 import FlashCards from "../models/flashCard.js";
-import data from "../data/flashCardData.JSON" assert { type: "JSON" };
+import data from "../data/data.json" assert { type: "json" };
 
 // flash card data
 let flashCardData = data.map((data) => {
