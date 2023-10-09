@@ -1,0 +1,146 @@
+[
+  { 
+    "question": "Explain event delegation/Explain how this works in JavaScript.",
+    "answer": "Event delegation is a technique where you attach a single event listener to a common ancestor of multiple elements to efficiently handle events on those elements. 'this' in JavaScript refers to the current execution context, which varies depending on how and where a function is called. It typically points to the object that invoked the function."
+  },
+  {
+    "question": "Explain how prototypal inheritance works.",
+    "answer": "Prototypal inheritance in JavaScript is based on the concept of prototypes. Each object has a prototype, and when you access a property or method on an object, JavaScript looks for it in the object itself and then in its prototype chain. This allows objects to inherit properties and behaviors from other objects."
+  },
+  {
+    "question": "What do you think of AMD vs CommonJS?",
+    "answer": "AMD (Asynchronous Module Definition) and CommonJS are module systems in JavaScript. CommonJS is used in Node.js and relies on synchronous loading, while AMD is designed for asynchronous loading in browsers. The choice depends on the environment and project requirements. CommonJS is suitable for server-side code, while AMD is often used in browser-based applications."
+  },
+  {
+    "question": "Explain why the following doesn't work as an IIFE: function foo(){ }();. What needs to be changed to properly make it an IIFE?",
+    "answer": "The provided code doesn't work as an IIFE because of a syntax error. To make it an IIFE, you should wrap the function declaration in parentheses like this: (function foo(){ })();. This allows the function to be declared and immediately invoked."
+  },
+  {
+    "question": "What's the difference between a variable that is: null, undefined, or undeclared? How would you go about checking for any of these states?",
+    "answer": "In JavaScript, 'null' represents the intentional absence of any object value, 'undefined' indicates that a variable has been declared but not assigned a value, and 'undeclared' means a variable has been used without being declared. To check for these states, you can use conditional statements. For 'null' or 'undefined', use 'if (variable === null)' or 'if (typeof variable === 'undefined')'. To check if a variable is undeclared, use 'typeof variable === 'undefined'' or use 'try-catch' to handle a ReferenceError."
+  },
+  {
+    "question": "What is a closure, and how/why would you use one?",
+    "answer": "A closure is a function that retains access to its own scope and the scope of its containing (enclosing) function. Closures are used to encapsulate data, create private variables, and maintain state across function calls. They are powerful for creating modular and maintainable code."
+  },
+  {
+    "question": "Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?",
+    "answer": "The main difference between '.forEach' and '.map' is that '.forEach' iterates over an array and performs an operation on each element but doesn't create a new array. '.map' also iterates over an array but creates a new array by applying a function to each element and returning the results. Use '.forEach' when you want to perform a side effect on each element (e.g., printing to the console) without changing the original array. Use '.map' when you want to transform an array's elements into a new array based on a function."
+  },
+  {
+    "question": "What's a typical use case for anonymous functions?",
+    "answer": "Anonymous functions, also known as function expressions, are often used when you need to define a function on the fly without giving it a name. Common use cases include passing functions as arguments to other functions (e.g., callbacks), creating immediately invoked function expressions (IIFE), and defining functions within objects or arrays."
+  },
+  {
+    "question": "How do you organize your code? (module pattern, classical inheritance?)",
+    "answer": "Code organization depends on the project and personal preference. Common approaches include using the module pattern for encapsulation and separation of concerns, leveraging ES6 modules for modularity, using classical inheritance (less common in modern JavaScript), and following object-oriented or functional programming principles. Choose an organization method that suits the project's needs and maintainability."
+  },
+  {
+    "question": "What's the difference between host objects and native objects?",
+    "answer": "Host objects and native objects refer to objects in the JavaScript environment. Native objects are built-in objects provided by the JavaScript language itself, such as 'Array,' 'Object,' and 'Function.' Host objects are provided by the environment in which JavaScript runs, such as the browser or Node.js. Host objects can vary between environments and are not part of the JavaScript language specification."
+  },
+  {
+    "question": "Difference between: function Person(){}, var person = Person(), and var person = new Person()?",
+    "answer": "The provided code snippets illustrate different concepts in JavaScript. 'function Person(){}' defines a constructor function named 'Person.' 'var person = Person()' invokes the constructor function as a regular function, creating an object if the constructor explicitly returns an object; otherwise, it assigns 'undefined' to 'person.' 'var person = new Person()' creates a new instance of 'Person' using the 'new' keyword, invoking the constructor function and returning a new object. The 'new' keyword ensures that 'person' is an instance of 'Person.'"
+  },
+  {
+    "question": "What's the difference between .call and .apply?",
+    "answer": "'.call' and '.apply' are methods in JavaScript used to invoke functions with a specific 'this' value and pass arguments. The primary difference is in how you pass arguments to the function. '.call' accepts arguments as a comma-separated list after the 'this' value, while '.apply' accepts arguments as an array after the 'this' value. You might choose '.call' when you know the number of arguments and can pass them individually, and '.apply' when you have an array of arguments or want to dynamically pass arguments."
+  },
+  {
+    "question": "When would you use document.write()?",
+    "answer": "'document.write()' is rarely used in modern web development. It can be used to write content directly to the HTML document while it's being parsed, such as during initial page load. However, it's not recommended because it can overwrite the entire document if used after the page has fully loaded. It's better to manipulate the DOM using other methods like 'document.createElement()' and 'appendChild()' for better control and maintainability."
+  },
+  {
+    "question": "Explain Function.prototype.bind.",
+    "answer": "The 'bind()' method is used to create a new function that, when called, has its 'this' value set to a specific value and can also pre-bind arguments to the function. It doesn't invoke the original function but returns a new function with the specified 'this' value and arguments. 'bind()' is commonly used to fix the 'this' value when passing functions as callbacks or when creating new functions based on existing ones with specific context and arguments."
+  },
+  {
+    "question": "What's the difference between feature detection, feature inference, and using the UA string?",
+    "answer": "1. Feature detection: It involves testing if a particular feature or property is supported by checking if it exists in the current environment. It's a reliable way to determine if a feature is available and is not dependent on assumptions about browser behavior.\n\n2. Feature inference: It assumes that if one feature is supported, related features are also supported. This approach can be less reliable and may lead to incorrect assumptions.\n\n3. Using the UA string (User-Agent): This involves parsing the user agent string sent by the browser to identify the browser and its version. This method is generally discouraged because user agent strings can be spoofed, and it doesn't provide accurate information about the actual capabilities of the browser. Feature detection is usually preferred over UA string parsing."
+  },
+  {
+    "question": "Explain Ajax in as much detail as possible.",
+    "answer": "Ajax (Asynchronous JavaScript and XML) is a set of web development techniques that allow web applications to make asynchronous requests to a server and update parts of a web page without requiring a full page reload. It involves the use of XMLHttpRequest or the Fetch API to send HTTP requests to a server and handle the response asynchronously.\n\nThe key components of Ajax are:\n- Sending asynchronous HTTP requests using XMLHttpRequest or the Fetch API.\n- Handling server responses (typically in JSON or XML format) in JavaScript.\n- Updating the DOM with the received data to provide a seamless user experience.\n\nAjax enables dynamic, responsive web applications by fetching data and updating the UI without disrupting the user's interaction. It is the foundation for many modern web technologies and libraries, such as single-page applications (SPAs) and RESTful APIs."
+  },
+  {
+    "question": "What are the advantages and disadvantages of using Ajax?",
+    "answer": "Advantages:\n- Enhanced User Experience: Ajax allows for smoother and more responsive web applications by updating content without page refreshes.\n- Reduced Server Load: Since only specific parts of a page are updated, it can reduce the load on the server.\n- Improved Interactivity: Ajax enables features like auto-suggestions in search fields, real-time updates, and interactive forms.\n\nDisadvantages:\n- Browser Compatibility: Ajax may require handling differences in browser implementations.\n- SEO Challenges: Search engines may have difficulty indexing Ajax-driven content.\n- Increased Complexity: Implementing and debugging Ajax can be more complex than traditional web development.\n- Back Button Issues: Properly managing history and navigation can be challenging."
+  },
+  {
+    "question": "Explain how JSONP works (and how it's not really Ajax).",
+    "answer": "JSONP (JSON with Padding) is a technique for making cross-domain requests in web applications. It involves inserting a script tag into the HTML document that references a remote script hosted on another domain. This script typically wraps the JSON data in a callback function and returns it to the client. The JSONP response is executed as a script, and the data is passed to a user-defined callback function.\n\nJSONP is not a true Ajax (Asynchronous JavaScript and XML) request because it circumvents the same-origin policy enforced by browsers for security reasons. Instead, it leverages the ability to include scripts from different domains. It's a workaround for making cross-domain requests when the server supports JSONP.\n\nHowever, JSONP has security and maintenance drawbacks, such as the potential for cross-site scripting (XSS) attacks and limited error handling. Modern web development often prefers using more secure and standard approaches like CORS (Cross-Origin Resource Sharing) for cross-domain requests."
+  },
+  {
+    "question": "Have you ever used JavaScript templating? If so, what libraries have you used?",
+    "answer": "Yes, JavaScript templating is commonly used for dynamically generating HTML content based on data. Several JavaScript libraries and frameworks provide templating capabilities. Some popular ones include Mustache, Handlebars, Underscore.js, and AngularJS (now Angular). The choice of a templating library depends on the project's requirements and the development stack being used."
+  },
+  {
+    "question": "Explain 'hoisting'.",
+    "answer": "Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. This means that you can use a variable or call a function before it's declared in the code, and JavaScript will still work as if it had been declared at the top.\n\nHowever, it's important to note that only the declarations are hoisted, not the initializations. Variable declarations are initialized with 'undefined' by default, while function declarations are fully hoisted, including their implementations.\n\nHoisting can lead to unexpected behavior if not understood correctly, so it's best practice to declare variables at the top of their scope and use functions only after they are declared."
+  },
+  {
+    "question": "Describe event bubbling.",
+    "answer": "Event bubbling is a phenomenon in JavaScript where, during the handling of an event on a DOM element, the event travels or bubbles up the DOM tree from the target element to its ancestors. This allows multiple elements to respond to the same event without needing individual event listeners on each element.\n\nThe order of event propagation in event bubbling is from the target element up to the root of the document. Event listeners attached to parent elements can intercept and handle the event before it reaches"
+  },
+  {
+    "question": "What's the difference between an 'attribute' and a 'property'?",
+    "answer": "In the context of HTML and DOM manipulation, an 'attribute' refers to the information contained within an HTML tag as part of its markup (e.g., 'src' in '<img src='image.jpg'>'). A 'property' is a value or state of a DOM element that can be accessed and manipulated using JavaScript (e.g., 'src' property of an image element). While attributes initialize properties, they are not always in sync. Changes to properties may not reflect back to attributes and vice versa."
+  },
+  {
+    "question": "Why is extending built-in JavaScript objects not a good idea?",
+    "answer": "Extending or modifying built-in JavaScript objects (like 'Array', 'String', 'Object', etc.) by adding new methods or properties can lead to unexpected behavior, compatibility issues, and code maintenance problems. It can conflict with future JavaScript features or library updates, and it may not work consistently across different environments. It's recommended to use prototypal inheritance or create custom utility functions instead."
+  },
+  {
+    "question": "Difference between document load event and document DOMContentLoaded event?",
+    "answer": "The 'document load' event ('window.onload') fires when the entire HTML document, including all its resources like images and stylesheets, has been fully loaded. This event indicates that the page and all its dependencies are ready. The 'document DOMContentLoaded' event fires when the HTML document has been fully parsed and the DOM tree is ready for manipulation. It occurs earlier than the 'load' event, allowing you to start interacting with the DOM before all external resources are loaded. It's often used for faster initialization of web pages and improved user experience."
+  },
+  {
+    "question": "What is the difference between == and ===?",
+    "answer": "In JavaScript, '==' is the equality operator, and '===' is the strict equality operator. '==' compares values for equality after performing type coercion, which means it converts the operands to a common type before making the comparison. For example, '1 == '1'' evaluates to 'true' because the values are equal after coercion.'===' compares values for equality without type coercion. It checks both the value and the type of the operands. For example, '1 === '1'' evaluates to 'false' because the types are different. It's generally recommended to use '===' (strict equality) to avoid unexpected type coercion and ensure a more predictable behavior."
+  },
+  {
+    "question": "Explain the same-origin policy with regards to JavaScript.",
+    "answer": "The same-origin policy is a security measure in web browsers that restricts web pages from making requests to a different domain (origin) than the one that served the web page. It is enforced to prevent malicious scripts from accessing sensitive data or performing actions on behalf of a user on unrelated websites. The policy ensures that JavaScript code from one origin cannot directly access resources (like data or cookies) from a different origin. However, there are techniques such as Cross-Origin Resource Sharing (CORS) that allow controlled access to resources on other origins with appropriate permissions."
+  },
+  {
+    "question": "Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]",
+    "answer": "To create a function 'duplicate' that duplicates the elements of an array, you can use the 'concat' method or the 'spread' operator. Here's an example using the 'spread' operator:\n\n```javascript\nfunction duplicate(arr) {\n  return [...arr, ...arr];\n}\n\nconst result = duplicate([1, 2, 3, 4, 5]);\nconsole.log(result); // [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]\n```"
+  },
+  {
+    "question": "Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?",
+    "answer": "The 'load' event is used to detect when a web page or its resources (like images and stylesheets) have fully loaded. It's essential for ensuring that your JavaScript code interacts with a fully initialized DOM. However, it has some disadvantages, such as waiting for all resources to load, which can slow down perceived page load time. Alternatives to 'load' event include 'DOMContentLoaded' for faster DOM interaction and 'window.onload' for waiting for all resources. The choice depends on the use case and desired behavior."
+  },
+  {
+    "question": "Explain what a single-page app is and how to make one SEO-friendly.",
+    "answer": "A single-page app (SPA) is a web application that loads a single HTML page and dynamically updates its content as the user interacts with it, without requiring full page reloads. SPAs are typically built using JavaScript frameworks like React, Angular, or Vue. To make an SPA SEO-friendly, you can use techniques like server-side rendering (SSR) or pre-rendering to generate HTML content on the server and serve it to search engines. This ensures that search engine crawlers can index your content effectively, even though the SPA loads dynamically."
+  },
+  {
+    "question": "What is the extent of your experience with Promises and/or their polyfills?",
+    "answer": "I have extensive experience with Promises in JavaScript. Promises are a way to handle asynchronous operations, and they provide a cleaner and more structured approach to dealing with callbacks. Promises make it easier to manage asynchronous code flow and handle errors gracefully. I'm also familiar with polyfills for Promises, which allow you to use Promises in environments that do not support them natively."
+  },
+  {
+    "question": "What are the pros and cons of using Promises instead of callbacks?",
+    "answer": "Pros of using Promises:\n- Improved code readability and maintainability due to a more structured approach.\n- Easier error handling through 'catch' blocks.\n- Better support for asynchronous flow control with methods like 'Promise.all' and 'Promise.race.'\n- Reduced callback hell (also known as the 'pyramid of doom').\n\nCons of using Promises:\n- Slightly larger code size due to the Promise implementation.\n- Limited browser support in older browsers without polyfills.\n- Potential learning curve for developers new to Promises."
+  },
+  {
+    "question": "What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?",
+    "answer": "Advantages:\n- Enhanced developer productivity and code maintainability.\n- Improved code quality and error checking through static typing.\n- Access to modern language features and syntactic sugar not available in vanilla JavaScript.\n- Better tooling and development environments.\n\nDisadvantages:\n- Increased build and compilation time.\n- Larger output code size.\n- Potential compatibility issues with third-party libraries.\n- Learning curve for developers unfamiliar with the transpiled language."
+  },
+  {
+    "question": "What tools and techniques do you use debugging JavaScript code?",
+    "answer": "I use a combination of browser developer tools (e.g., Chrome DevTools, Firefox DevTools) for debugging JavaScript code. These tools allow me to set breakpoints, inspect variables, and step through code execution. I also use console logging extensively for quick debugging. In addition, I use linting tools like ESLint and debugging extensions in code editors like Visual Studio Code. For more complex issues, I might use remote debugging and third-party tools like Sentry or New Relic for monitoring and error tracking."
+  },
+  {
+    "question": "What language constructions do you use for iterating over object properties and array items?",
+    "answer": "For iterating over object properties, I use 'for...in' loops or methods like 'Object.keys,' 'Object.values,' and 'Object.entries' in modern JavaScript. For arrays, I use 'for...of' loops, 'forEach,' 'map,' 'filter,' 'reduce,' and other array methods depending on the specific task. The choice of iteration method depends on the complexity of the task and the desired outcome."
+  },
+  {
+    "question": "Explain the difference between mutable and immutable objects.",
+    "answer": "Mutable objects are objects whose state can be changed after they are created. In JavaScript, objects like arrays and plain objects are mutable. This means you can add, modify, or remove properties or elements from them.\n\nImmutable objects, on the other hand, cannot be changed after they are created. Any operation on an immutable object returns a new object with the desired changes, leaving the original object unchanged. Examples of immutable objects in JavaScript include strings and numbers.\n\nImmutable objects have advantages in terms of predictability and avoiding unintended side effects in your code, while mutable objects can offer more flexibility for certain scenarios."
+  },
+  {
+    "question": "Explain the difference between synchronous and asynchronous functions.",
+    "answer": "Synchronous functions execute sequentially, blocking the execution of code until they complete. In other words, each operation is completed before the next one starts. Synchronous code can be easier to read and reason about but can lead to performance issues if long-running operations block the main thread.\n\nAsynchronous functions, on the other hand, allow code to continue executing without waiting for a particular operation to finish. They typically use callbacks, Promises, or async/await syntax to manage asynchronous operations. Asynchronous code is crucial for non-blocking behavior, like fetching data from a server or handling user interactions, to maintain a responsive user interface."
+  }
+]

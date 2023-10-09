@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
 
-const questrions = mongoose.Schema({
+const flashCards = mongoose.Schema({
     question: String,
     answer: String,
 })
 
 
-const Question =  mongoose.model('Question', questrions)
+const FlashCards =  mongoose.model('Question', flashCards )
 
-export default Question;
+export default FlashCards;
