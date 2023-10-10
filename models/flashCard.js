@@ -10,3 +10,5 @@ const flashCards = mongoose.Schema({
 const FlashCards =  mongoose.model('Question', flashCards )
 
 export default FlashCards;
+
+//TODO add a category model

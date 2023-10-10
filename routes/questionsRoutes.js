@@ -9,3 +9,8 @@ router.get("/all", controllers.getQuestions)
 router.post("/add", controllers.addQuestions)
 
 export default router
+
+//TODO add routs for full REST API
+
+
+//TODO add category routes

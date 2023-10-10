@@ -19,3 +19,11 @@ export const addQuestions = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+//TODO be able to update question
+
+
+//TODO be able to delete question
+
+
+//TODO be able to find a specific question
