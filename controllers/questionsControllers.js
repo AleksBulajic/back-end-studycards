@@ -20,10 +20,34 @@ export const addQuestions = async (req, res) => {
   }
 };
 
-//TODO be able to update question
+// get by ID
+export const findQuestion = async (req, res) => {
+  try {
+    const question = await FlashCards.findById(req.params.id);
+    res.status(200).json(question);
+    console.log(req.params.id);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+//update question
+// export const updateQuestion = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const updatedQuestion = req.body;
+  
+//     const question = await FlashCards.findByIdAndUpdate(id, updatedQuestion, {
+//       new: true,
+//     });
 
+//     res.status(200).json(question);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// };
 
 //TODO be able to delete question
-
 
 //TODO be able to find a specific question

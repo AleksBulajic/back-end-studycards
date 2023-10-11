@@ -6,7 +6,13 @@ const router = Router()
 //retrive a list of questions
 router.get("/all", controllers.getQuestions)
 
+router.get("/:id", controllers.findQuestion);
+
 router.post("/add", controllers.addQuestions)
+
+// router.put("/id/update", controllers.updateQuestion)
+
+
 
 export default router
 
