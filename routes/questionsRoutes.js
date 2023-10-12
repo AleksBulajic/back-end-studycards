@@ -10,7 +10,7 @@ router.get("/:id", controllers.findQuestion);
 
 router.post("/add", controllers.addQuestions)
 
-// router.put("/id/update", controllers.updateQuestion)
+router.put("/update/:id", controllers.updateQuestion)
 
 
 

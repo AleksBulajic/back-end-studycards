@@ -32,21 +32,21 @@ export const findQuestion = async (req, res) => {
   }
 };
 //update question
-// export const updateQuestion = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const updatedQuestion = req.body;
+export const updateQuestion = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedQuestion = req.body;
   
-//     const question = await FlashCards.findByIdAndUpdate(id, updatedQuestion, {
-//       new: true,
-//     });
+    const question = await FlashCards.findByIdAndUpdate(id, updatedQuestion, {
+      new: true,
+    });
 
-//     res.status(200).json(question);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: "Internal server error" });
-//   }
-// };
+    res.status(200).json(question);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
 
 //TODO be able to delete question
 
