@@ -9,7 +9,7 @@ export const getQuestions = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-// POST able to add games to the DB
+// POST able to add questions to the DB
 export const addQuestions = async (req, res) => {
   try {
     const question = new FlashCards(req.body);
